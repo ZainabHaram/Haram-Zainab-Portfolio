@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haram Zainab | Flutter Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href="#home">HARAM ZAINAB</a><span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#contact" class="btn-nav">Hire Me</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="greeting">HELLO THERE</span>
+                <h1>Hi, I’m <span>Haram Zainab</span></h1>
+                <h2>Flutter Developer</h2>
+                <p>Building sleek, modern, and user-friendly applications using Flutter Based in Karachi, PK.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-primary">Hire Me Now</a>
+                    <a href="#projects" class="btn-secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <div class="img-outline">
+                    <img src="images/haramzainab.jpeg" alt="Haram Zainab">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+               
+                <div class="about-info">
+                    <span class="sub-title">HARAM ZAINAB</span>
+                    <h2>About me</h2>
+                    <p>Detail-oriented Software Engineering student at SMIU with strong backend
+                       skills. Proficient in C#, Firebase, Flutter, Dart, C++, MySQL, and SQL Server. 
+                       Experienced in .NET development and focused on building scalable, efficient solutions in team environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="center-title">
+                <span class="sub-title">TECHNICAL SKILLS</span>
+                <h2>Tech Stack</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Dart</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Flutter</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>SQL Server</h3>
+                </div>
+                <div class="skill-card">
+                    <h3>Html5 & CSS3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="center-title">
+                <span class="sub-title">MY WORK</span>
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/partex.jpeg" alt="Project 1">
+                    <h3>E-Commerce POS System</h3>
+                    <p>A Flutter-based POS system for inventory, billing, and PDF invoices with secure login and
+                        real-time product management.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/babyshop.jpeg" alt="Project 2">
+                    <h3>Baby Shop Hub</h3>
+                    <p>Baby Shop Hub is a digital platform that allows users to shop for baby items online.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/portfolio.jpg" alt="Project 3">
+                    <h3>Portfolio Website</h3>
+                    <p>Personal brand website with modern design, performance focus, and responsive layout.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to discuss your project or ask any questions.</p>
+                    <div class="contact-item"><strong>Email:</strong> haramzainab@gmail.com</div>
+                    <div class="contact-item"><strong>Phone:</strong> +92 300 1234567</div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <div class="input-row">
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <input type="text" placeholder="Subject">
+                        <textarea placeholder="Tell me more about your project..." rows="6" required></textarea>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Haram Zainab. Portfolio Website.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
+        });
+
+        navItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
